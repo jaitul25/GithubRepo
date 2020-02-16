@@ -10,7 +10,7 @@ def get_repo_details(user_name):
 
     user_url = 'https://api.github.com/users/{user_name}/repos'
     
-    result.append(f'User: {user_name}')
+    result.append('User: {user_name}')
 
     try:
         res = requests.get(user_url)
