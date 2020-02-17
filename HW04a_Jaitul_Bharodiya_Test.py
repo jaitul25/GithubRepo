@@ -11,4 +11,4 @@ class TestRepo(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(exit=False,verbosity=2)
+    unittest.main()
