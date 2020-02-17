@@ -23,10 +23,10 @@ def get_repo_details(user_name):
     try:
         for repo in repos:
             repo_name = repo['name']
-            repo_url = 'https://api.github.com/repos/{0}/{1}/commits'.format(user_name, repo_name)
+            repo_url = 'https://api.github.com/repos/{}/{}/commits'.format(user_name, repo_name)
             repo_detail = requests.get(repo_url)
             repo_detail_json = json.loads(repo_detail.text)
-            result.append('Repo: {0} Number of commits: {len(repo_detail_json)}'.format(repo_name))
+            result.append('Repo: {0} Number of commits: {1}'.format(repo_name,len(repo_detail_json)))
     except (TypeError, KeyError, IndexError):
         return "unable to fetch user's commits"
 
@@ -42,4 +42,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
