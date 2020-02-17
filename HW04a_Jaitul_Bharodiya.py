@@ -8,7 +8,7 @@ def get_repo_details(user_name):
     """Fetched the repository"""
     result = []
 
-    user_url = 'https://api.github.com/users/{user_name}/repos'
+    user_url = f'https://api.github.com/users/{user_name}/repos'
     
     result.append('User: {user_name}')
 
