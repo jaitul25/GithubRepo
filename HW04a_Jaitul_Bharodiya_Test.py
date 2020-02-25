@@ -28,7 +28,7 @@ class TestRepo(unittest.TestCase):
         """Testing the repository and commits"""
         mocked.side_effect = get_url
         reposit = get_repo_details('themalavshastri')
-        self.assertEqual(reposit,'unable to fetch users repos')
+        self.assertEqual(reposit,"unable to fetch user's repos")
 
 
 
